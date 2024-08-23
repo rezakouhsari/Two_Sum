@@ -3,17 +3,14 @@ package main
 import "fmt"
 
 func main() {
-
-	arr := []int{8, 7, 5, 6, 9, 3, 2, 0, 3, 2, 5, 6, 9, 8}
-
-	for i := 0; i < len(arr); i++ {
-		for j := 0; j < len(arr); j++ {
-			if arr[i]+arr[j] == 10 {
-				fmt.Println("values sum = ", arr[i], arr[j])
+	for i := 0; i < len(nums); i++ {
+		for j := i+1; j < len(nums); j++ {
+            if i != j && nums[i]+nums[j] == target {
+				fmt.Println("values sum = ", nums[i], nums[j])
 				fmt.Println("index of in slice = ", i, j)
-				return
+				return []int{i, j}
 			}
 		}
 	}
-
+    return []int{0, 0}
 }
