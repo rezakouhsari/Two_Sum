@@ -9,11 +9,11 @@ func main() {
 	for i := 0; i < len(arr); i++ {
 		for j := 0; j < len(arr); j++ {
 			if arr[i]+arr[j] == 10 {
-				fmt.Println(arr[i], arr[j])
-				break
+				fmt.Println("values sum = ", arr[i], arr[j])
+				fmt.Println("index of in slice = ", i, j)
+				return
 			}
 		}
-		break
 	}
 
 }
